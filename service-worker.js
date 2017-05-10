@@ -285,7 +285,7 @@ self.addEventListener('fetch', function(event) {
 
 // Runtime cache configuration, using the sw-toolbox library.
 
-toolbox.router.get("C:\\Users\\Rhan\\Documents\\React\\simple-drawer\\conf", toolbox.cacheFirst, {});
+toolbox.router.get(/\*/, toolbox.cacheFirst, {});
 
 
 
