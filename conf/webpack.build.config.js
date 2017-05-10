@@ -4,6 +4,7 @@ const WebpackConfig = require('webpack-config').default;
 const WebpackCleanupPlugin = require('webpack-cleanup-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const CompressionWebpackPlugin = require('compression-webpack-plugin');
+const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
 
 module.exports = new WebpackConfig()
   .extend(path.resolve(__dirname, './webpack.base.config.js'))
@@ -13,7 +14,7 @@ module.exports = new WebpackConfig()
     },
     output: {
       path: path.resolve(__dirname, "../dist"),
-      filename: "static/js/[name].bundle.js",
+      filename: "static/js/[name].bundle.js"
     },
     devtool: 'cheap-source-map',
     plugins: [
@@ -30,6 +31,16 @@ module.exports = new WebpackConfig()
       }),
       new webpack.DefinePlugin({
         'process.env.NODE_ENV': JSON.stringify('production')
+      }),
+      new SWPrecacheWebpackPlugin({
+        cacheId: 'app-cache',
+        filename: 'service-worker.js',
+        runtimeCaching: [
+          {
+            urlPattern: /\//,
+            handler: 'cacheFirst',
+          }
+        ]
       })
     ]
   });
