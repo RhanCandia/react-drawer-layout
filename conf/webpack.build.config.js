@@ -8,6 +8,9 @@ const CompressionWebpackPlugin = require('compression-webpack-plugin');
 module.exports = new WebpackConfig()
   .extend(path.resolve(__dirname, './webpack.base.config.js'))
   .merge({
+    entry: {
+      sw: './src/sw.js'
+    },
     output: {
       path: path.resolve(__dirname, "../dist"),
       filename: "static/js/[name].bundle.js",
