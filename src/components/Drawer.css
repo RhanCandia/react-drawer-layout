@@ -1,0 +1,14 @@
+.Drawer {
+    background-color: #fff;
+    box-shadow: 0 0 2px #333;
+    height: 100vh;
+    width: 250px;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    transition: left 300ms ease-in-out;
+}
+
+.hide {
+    left: -250px;
+}
