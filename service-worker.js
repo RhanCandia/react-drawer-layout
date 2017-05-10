@@ -37,7 +37,7 @@
 /* eslint-disable indent, no-unused-vars, no-multiple-empty-lines, max-nested-callbacks, space-before-function-paren, quotes, comma-spacing */
 'use strict';
 
-var precacheConfig = [["C:/Users/Rhan/Documents/React/simple-drawer/dist/favicon.ico","fd73a6eb26a08ee46e7fd3cc34e7f6bf"],["C:/Users/Rhan/Documents/React/simple-drawer/dist/images/icons/icon-128x128.png","483b81ba94943753b1153755408e987d"],["C:/Users/Rhan/Documents/React/simple-drawer/dist/images/icons/icon-144x144.png","5c888b957e0cd7aad148751996e4ce0f"],["C:/Users/Rhan/Documents/React/simple-drawer/dist/images/icons/icon-152x152.png","64412bf89712d49d9f9ce1f2292c0d9a"],["C:/Users/Rhan/Documents/React/simple-drawer/dist/images/icons/icon-192x192.png","5202d4fcc53e3d2731c472e280c7641b"],["C:/Users/Rhan/Documents/React/simple-drawer/dist/images/icons/icon-384x384.png","326e044bcf4b161c012677a1ef174adc"],["C:/Users/Rhan/Documents/React/simple-drawer/dist/images/icons/icon-512x512.png","02183950ad04b6c94dad4d537b6eb798"],["C:/Users/Rhan/Documents/React/simple-drawer/dist/images/icons/icon-72x72.png","6fe05ee89df5d7c49a6d5c2463210a22"],["C:/Users/Rhan/Documents/React/simple-drawer/dist/images/icons/icon-96x96.png","e9a5de2a5843fc52a179b9081559dcc8"],["C:/Users/Rhan/Documents/React/simple-drawer/dist/index.html","622cc96987f001127919af150af123b8"],["C:/Users/Rhan/Documents/React/simple-drawer/dist/manifest.json","b4b308b5a3ed0f0d20685b7ddb3d51bf"],["C:/Users/Rhan/Documents/React/simple-drawer/dist/service-worker.js","0eab26a6499f70186710742257377c36"],["C:/Users/Rhan/Documents/React/simple-drawer/dist/static/js/main.bundle.js","183cd973ef148f6b592a6af59c6280e2"],["C:/Users/Rhan/Documents/React/simple-drawer/dist/static/js/main.bundle.js.gz","179199284dc017a6073c96d048dc8416"],["C:/Users/Rhan/Documents/React/simple-drawer/dist/static/js/sw.bundle.js","d4a600ff2034545165857b2a60ddacba"],["C:/Users/Rhan/Documents/React/simple-drawer/dist/static/js/sw.bundle.js.gz","851611292fba35d975e1191563eb5c15"]];
+var precacheConfig = [["favicon.ico","fd73a6eb26a08ee46e7fd3cc34e7f6bf"],["images/icons/icon-128x128.png","483b81ba94943753b1153755408e987d"],["images/icons/icon-144x144.png","5c888b957e0cd7aad148751996e4ce0f"],["images/icons/icon-152x152.png","64412bf89712d49d9f9ce1f2292c0d9a"],["images/icons/icon-192x192.png","5202d4fcc53e3d2731c472e280c7641b"],["images/icons/icon-384x384.png","326e044bcf4b161c012677a1ef174adc"],["images/icons/icon-512x512.png","02183950ad04b6c94dad4d537b6eb798"],["images/icons/icon-72x72.png","6fe05ee89df5d7c49a6d5c2463210a22"],["images/icons/icon-96x96.png","e9a5de2a5843fc52a179b9081559dcc8"],["index.html","768fd57a882ba5298009676e9e1d379a"],["manifest.json","33df3d837dcebef4da5a282e41384086"],["service-worker.js","6eeabca2f573eb759b14281dc38b8c95"],["static/js/main.bundle.js","dbf4369716d99670d9d7c96d82625941"],["static/js/main.bundle.js.gz","161cb9a879ad667647a7fc3fdedff6b3"],["static/js/sw.bundle.js","d4a600ff2034545165857b2a60ddacba"],["static/js/sw.bundle.js.gz","24913a62ec286a976971cc00ed49f105"]];
 var cacheName = 'sw-precache-v3-app-cache-' + (self.registration ? self.registration.scope : '');
 
 
@@ -285,7 +285,7 @@ self.addEventListener('fetch', function(event) {
 
 // Runtime cache configuration, using the sw-toolbox library.
 
-toolbox.router.get(/\//, toolbox.cacheFirst, {});
+toolbox.router.get(/\//, toolbox.fastest, {});
 
 
 
