@@ -1,3 +1,7 @@
+html, body {
+    background-color: #333;
+}
 .App {
     height: 100vh;
+    overflow-x: hidden;
 }
